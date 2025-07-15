@@ -7,8 +7,6 @@ const PlayerContext = createContext();
 export function PlayerProvider({ children }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(null);
-  // const togglePlay = () => setIsPlaying(prev => !prev);
-  // const [isLike, setIsLike] = useState(false);
   const [tracksData, setTracksData] = useState(initialMusicData);
 
   const handleToggleLike = trackId => {
