@@ -1,0 +1,17 @@
+.PlayButtonActionMenu {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 40px;
+  height: 28px;
+  padding: 6px 12px;
+
+  svg {
+    width: 16px;
+    height: 16px;
+    color: #000;
+    &:hover {
+      color: rgba(0, 0, 0, 0.267);
+    }
+  }
+}

@@ -1,0 +1,83 @@
+@import '../../../index.css';
+
+form:focus,
+input:focus {
+  outline: none;
+}
+.searchForm {
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px 0;
+  height: 46px;
+  margin: 0 16px 0 24px;
+  box-sizing: border-box;
+  outline: none;
+  //   background: #303030;
+  padding: 5px 0 5px 0;
+  // width: 330.188px;
+  flex-grow: 1;
+  // width: 100%;
+  font-size: 14px;
+  .searchInput {
+    display: inline-block;
+    padding: 8px 16px;
+    height: 36px;
+    border-radius: 3px;
+    width: 100%;
+    border: 1px solid transparent;
+    transition: border-color 0.1s;
+    background-color: #303030;
+    color: #121212;
+    caret-color: #f50;
+    &:focus {
+      border: 1px solid #999;
+    }
+    &::placeholder {
+      font:
+        400 13.8px var(--font-inter),
+        SoundCloud Sans,
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Ubuntu,
+        Cantarell,
+        Noto Sans,
+        sans-serif,
+        'Segoe UI',
+        Roboto,
+        'Lucida Grande',
+        sans-serif,
+        'Apple Color Emoji';
+      color: #999;
+    }
+  }
+}
+// }
+.searchButton {
+  border: none;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  background-color: initial;
+
+  &:active {
+    background-color: #d0d0d0;
+  }
+}
+.searchIcon {
+  width: 24px;
+  height: 24px;
+  background: #303030;
+  color: #999;
+  fill: #333;
+}

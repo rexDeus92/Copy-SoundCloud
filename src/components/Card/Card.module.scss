@@ -1,0 +1,108 @@
+.cardWrapper {
+  max-width: 159.36px;
+  max-height: 207.36px;
+  .imgWrapper {
+    position: relative;
+    width: 159.36px;
+    height: 159.36px;
+    overflow: hidden;
+    border-radius: 3%;
+    cursor: pointer;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &:hover {
+      .imgOverlay {
+        visibility: visible;
+      }
+      .btn {
+        visibility: visible;
+      }
+    }
+
+    .imgOverlay {
+      display: block;
+      position: absolute;
+      top: 0;
+      background-color: hsla(0, 0%, 100%, 0.4);
+      width: 159.36px;
+      height: 159.36px;
+      visibility: hidden;
+      .PlayButtonAction {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 80px;
+        height: 28px;
+        margin: 0 8px 8px 0;
+      }
+    }
+    .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      visibility: hidden;
+    }
+
+    .likeBtn {
+      position: absolute;
+    }
+  }
+  .content {
+    overflow: visible;
+    margin-top: 8px;
+    font-size: 14px;
+    .name {
+      font:
+        600 1rem / 1.4285714285714286rem (--font-inter, SoundCloud Sans),
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Ubuntu,
+        Cantarell,
+        Noto Sans,
+        sans-serif,
+        'Segoe UI',
+        Roboto,
+        'Lucida Grande',
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji';
+      line-height: 20px;
+      color: #fff;
+      cursor: pointer;
+      &:hover {
+        color: rgb(102, 102, 102);
+      }
+    }
+    .executor {
+      font:
+        600 13.9px var(--font-inter, SoundCloud Sans),
+        system-ui,
+        -apple-system,
+        Segoe UI,
+        Roboto,
+        Ubuntu,
+        Cantarell,
+        Noto Sans,
+        sans-serif,
+        'Segoe UI',
+        Roboto,
+        'Lucida Grande',
+        sans-serif,
+        'Apple Color Emoji',
+        'Segoe UI Emoji';
+      color: #666;
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      line-height: 20px;
+      word-break: normal;
+    }
+  }
+}
