@@ -8,7 +8,6 @@ export function PlayerProvider({ children }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTrack, setCurrentTrack] = useState(null);
   const [tracksData, setTracksData] = useState(initialMusicData);
-
   const handleToggleLike = trackId => {
     // В React мы НИКОГДА не меняем состояние напрямую.
     // Мы создаем его полную, обновленную копию.
