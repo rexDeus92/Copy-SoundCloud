@@ -3,9 +3,9 @@ import s from './HeaderNavBar.module.scss';
 
 export function HeaderNavBar() {
   const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/Feed', label: 'Feed' },
-    { path: '/Library', label: 'Library' },
+    { path: '/Copy-SoundCloud/', label: 'Home' },
+    { path: '/Copy-SoundCloud/Feed', label: 'Feed' },
+    { path: '/Copy-SoundCloud/Library', label: 'Library' },
   ];
 
   return (

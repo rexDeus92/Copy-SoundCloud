@@ -20,8 +20,8 @@ function App() {
           </header>
           <main>
             <Routes>
-              <Route path='/' element={<MainPage />} />
-              <Route path='/Feed' element={<DropdownMenu />} />
+              <Route path='Copy-SoundCloud/' element={<MainPage />} />
+              <Route path='Copy-SoundCloud/Feed' element={<DropdownMenu />} />
             </Routes>
           </main>
           <footer></footer>
