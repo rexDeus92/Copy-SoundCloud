@@ -1,14 +1,25 @@
 
 # Copy-SoundCloud
 
-soundcloud/
-│
+Клон SoundCloud на React + Vite
+
+---
+
+## Описание
+
+Copy-SoundCloud — это учебный проект, реализующий основные функции музыкального сервиса SoundCloud: проигрывание треков, лайки, навигация по страницам, выпадающие меню и современный интерфейс.
+
+---
+
+## Структура проекта
+
+```
+Copy-SoundCloud/
 ├── index.html
 ├── package.json
 ├── package-lock.json
 ├── bun.lock
 ├── README.md
-├── README.md~
 ├── QUICK_START.md
 ├── eslint.config.js
 ├── tailwind.config.js
@@ -34,82 +45,78 @@ soundcloud/
 │   │   ├── music.data.js
 │   │   └── user.data.js
 │   ├── /components/
-│   │   ├── /Buttons/
-│   │   │   ├── /HeaderProfileMenuButton/
-│   │   │   │   ├── HeaderProfileMenuButton.jsx
-│   │   │   │   └── HeaderProfileMenuButton.module.scss
-│   │   │   ├── /LikeButton/
-│   │   │   │   ├── LikeButton.jsx
-│   │   │   │   └── LikeButton.module.scss
-│   │   │   ├── /MessagesButton/
-│   │   │   │   ├── MessagesButton.jsx
-│   │   │   │   └── MessagesButton.module.scss
-│   │   │   ├── /PlayButton/
-│   │   │   │   ├── PlayButton.jsx
-│   │   │   │   └── PlayButton.module.scss
-│   │   │   ├── /PlayButtonActionMenu/
-│   │   │   │   ├── PlayButtonActionMenu.jsx
-│   │   │   │   └── PlayButtonActionMenu.module.scss
-│   │   │   └── /SearchIcon/
-│   │   │       ├── SearchIcon.jsx
-│   │   │       └── SearchIcon.module.scss
-│   │   ├── /Card/
-│   │   │   ├── Card.jsx
-│   │   │   └── Card.module.scss
-│   │   ├── /DropDown/
-│   │   │   ├── DropDown.jsx
-│   │   │   ├── DropDown.module.scss
-│   │   │   ├── /DropDownMenu/
-│   │   │   │   ├── DropDownMenu.jsx
-│   │   │   │   └── DropDownMenu.module.scss
-│   │   │   └── /DropDownMenuOpener/
-│   │   │       ├── DropDownMenuOpener.jsx
-│   │   │       └── DropDownMenuOpener.module.scss
-│   │   ├── /Header/
-│   │   │   ├── Header.jsx
-│   │   │   ├── Header.module.scss
-│   │   │   ├── /HeaderNavBar/
-│   │   │   │   ├── HeaderNavBar.jsx
-│   │   │   │   └── HeaderNavBar.module.scss
-│   │   │   ├── /HeaderRight/
-│   │   │   │   ├── HeaderRight.jsx
-│   │   │   │   ├── HeaderRight.module.scss
-│   │   │   │   ├── /UserActions/
-│   │   │   │   │   ├── UserActions.jsx
-│   │   │   │   │   └── UserActions.module.scss
-│   │   │   │   └── /UserNav/
-│   │   │   │       ├── UserNav.jsx
-│   │   │   │       └── UserNav.module.scss
-│   │   │   └── /HeaderSearchBar/
-│   │   │       ├── HeaderSearchBar.jsx
-│   │   │       └── HeaderSearchBar.module.scss
-│   │   └── /Menu/
-│   │       └── /HeaderNavMenu/
-│   │           ├── HeaderNavMenu.jsx
-│   │           └── HeaderNavMenu.module.scss
+│   │   └── ... (см. подробности ниже)
 │   └── /pages/
 │       ├── MainPage.jsx
 │       └── main.module.scss
+└── ...
+```
+
+### Основные компоненты
+- **Header** — верхняя панель с навигацией, поиском и профилем
+- **MainPage** — главная страница с карточками треков
+- **Card** — карточка трека
+- **PlayButton, LikeButton** — кнопки управления
+- **DropDown, DropDownMenu** — выпадающие меню
+- **PlayContext** — глобальный контекст для управления воспроизведением
 
 ---
 
-graph TD
-  A[index.html] --> B(main.jsx)
-  B --> C(App.jsx)
-  C --> D(Header)
-  C --> E(MainPage)
-  D --> F(HeaderNavBar)
-  D --> G(HeaderRight)
-  D --> H(HeaderSearchBar)
-  G --> I(UserActions)
-  G --> J(UserNav)
-  E --> K(Card)
-  E --> L(PlayButton)
-  E --> M(LikeButton)
-  C --> N(DropDown)
-  N --> O(DropDownMenu)
-  N --> P(DropDownMenuOpener)
-  C --> Q(PlayContext)
+## Быстрый старт
+
+1. Установите зависимости:
+   ```sh
+   npm install
+   # или
+   bun install
+   ```
+2. Запустите проект:
+   ```sh
+   npm run dev
+   # или
+   bun run dev
+   ```
+3. Откройте [http://localhost:5173](http://localhost:5173) в браузере.
+
+---
+
+## Используемые технологии
+
+- **React** — UI библиотека
+- **Vite** — быстрый сборщик
+- **Tailwind CSS** — стилизация
+- **SCSS-модули** — стили для компонентов
+- **Bun** — альтернативный пакетный менеджер (опционально)
+- **ESLint, Prettier** — линтинг и форматирование
+
+---
+
+## Визуальная схема компонентов
+
+```mermaid
+graph TD;
+  A["index.html"] --> B["main.jsx"]
+  B --> C["App.jsx"]
+  C --> D["Header"]
+  C --> E["MainPage"]
+  D --> F["HeaderNavBar"]
+  D --> G["HeaderRight"]
+  D --> H["HeaderSearchBar"]
+  G --> I["UserActions"]
+  G --> J["UserNav"]
+  E --> K["Card"]
+  E --> L["PlayButton"]
+  E --> M["LikeButton"]
+  C --> N["DropDown"]
+  N --> O["DropDownMenu"]
+  N --> P["DropDownMenuOpener"]
+  C --> Q["PlayContext"]
   Q --> L
   Q --> K
-  
+```
+
+---
+
+## Лицензия
+
+MIT
