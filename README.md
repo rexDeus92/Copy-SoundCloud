@@ -1,7 +1,6 @@
 
 # Copy-SoundCloud
 
-
 soundcloud/
 │
 ├── index.html
@@ -92,9 +91,7 @@ soundcloud/
 │       ├── MainPage.jsx
 │       └── main.module.scss
 
-
-
-
+---
 
 graph TD
   A[index.html] --> B(main.jsx)
@@ -115,3 +112,4 @@ graph TD
   C --> Q(PlayContext)
   Q --> L
   Q --> K
+  
